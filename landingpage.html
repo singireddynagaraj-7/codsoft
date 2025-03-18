@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog - Singireddy Nagaraju</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #121212;
+            color: white;
+            text-align: center;
+        }
+
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            padding: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 1.3em;
+            margin: 10px 0;
+        }
+
+        .cta-btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: white;
+            color: #ff4b2b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        .cta-btn:hover {
+            background-color: #ff4b2b;
+            color: white;
+        }
+
+        .blog-section {
+            padding: 50px 20px;
+        }
+
+        .blog-card {
+            background: #1e1e1e;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 500px;
+            border-radius: 10px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease-in-out;
+        }
+
+        .newsletter {
+            margin-top: 30px;
+            padding: 20px;
+            background: #1e1e1e;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 10px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .footer {
+            background: #222;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>Welcome to My Tech Blog</h1>
+        <p>Stay updated with the latest in programming, web development, and AI.</p>
+        <button class="cta-btn">Read Blogs</button>
+    </section>
+
+    <section class="blog-section">
+        <h2>Latest Articles</h2>
+        <div class="blog-card">🚀 "Getting Started with JavaScript in 2025"</div>
+        <div class="blog-card">🎨 "Top 5 CSS Tricks for Responsive Design"</div>
+        <div class="blog-card">🧠 "The Future of AI in Web Development"</div>
+    </section>
+
+    <section class="newsletter">
+        <h3>Subscribe to Our Newsletter</h3>
+        <input type="email" placeholder="Enter your email">
+        <button class="cta-btn">Subscribe</button>
+    </section>
+
+    <footer class="footer">
+        <p>©️ 2025 Singireddy Nagaraju | Follow me on <a href="#" style="color: #ff416c;">LinkedIn</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const blogs = document.querySelectorAll(".blog-card");
+            blogs.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+                }, 500 * index);
+            });
+        });
+    </script>
+</body>
+</html>
